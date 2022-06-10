@@ -30,10 +30,10 @@ def login():
             return jsonify(access_token=access_token)
     return jsonify({"msg": "Invalid cedentials."}), 401
 
-@api.route("/signup", methods=["POST"])
+@api.route("/register", methods=["POST"])
 def signup ():
     email = request.json.get("email", None)
-    password = request.json.get("pass", None)
+    password = request.json.get("password", None)
     user = User.query.filter_by(email=email).one_or_none()
     if user is None:
         user = User(email=email, password=password, is_active=True)
