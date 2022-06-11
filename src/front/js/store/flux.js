@@ -36,7 +36,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           );
 
           if (resp.status !== 200) {
-            alert("There was an error");
+            alert("Account already exists, please log in!");
             return false;
           }
 

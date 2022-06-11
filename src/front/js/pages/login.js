@@ -21,7 +21,7 @@ export const Login = () => {
     <div className="text-center mt-5">
       <h1>Login</h1>
       {!!token ? (
-        "You're logged in with this token" + token
+        "You're logged in"
       ) : (
         <div>
           <input
