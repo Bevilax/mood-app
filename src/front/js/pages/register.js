@@ -16,7 +16,7 @@ export const Register = () => {
   };
   return (
     <div>
-      <h1>hello</h1>
+      <h1>New user registration</h1>
       <input
         type="text"
         placeholder="email"

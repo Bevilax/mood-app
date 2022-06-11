@@ -39,6 +39,13 @@ export const Login = () => {
           <button onClick={handleClick}>Login</button>
         </div>
       )}
+      <div>
+        <div className="register-button">
+          <a href={"/register/"} className="btn btn-primary">
+            Create an Account
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
