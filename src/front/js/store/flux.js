@@ -49,6 +49,11 @@ const getState = ({ getStore, getActions, setStore }) => {
           console.error("There has been an error logging in!");
         }
       },
+      logout: () => {
+        sessionStorage.removeItem("token");
+        console.log("You are logout");
+        setStore({ token: null });
+      },
 
       login: async (email, password) => {
         const opts = {
