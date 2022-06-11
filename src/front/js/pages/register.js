@@ -6,6 +6,7 @@ import { Context } from "../store/appContext";
 export const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { store, actions } = useContext(Context);
   const history = useHistory();
 
   const handleClick = () => {

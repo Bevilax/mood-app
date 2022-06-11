@@ -22,7 +22,7 @@ def protected():
 @api.route("/token", methods=["POST"])
 def login():
     email = request.json.get("email", None)
-    password = request.json.get("pass", None)
+    password = request.json.get("password", None)
     user = User.query.filter_by(email=email).one_or_none()
     if user is not None:
         if user.check_password_hash(password):
@@ -31,10 +31,12 @@ def login():
     return jsonify({"msg": "Invalid cedentials."}), 401
 
 @api.route("/register", methods=["POST"])
-def signup ():
+def register():
     email = request.json.get("email", None)
     password = request.json.get("password", None)
     user = User.query.filter_by(email=email).one_or_none()
+    print(email)
+    print(user)
     if user is None:
         user = User(email=email, password=password, is_active=True)
         db.session.add(user)
