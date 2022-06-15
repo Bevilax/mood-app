@@ -21,16 +21,7 @@ export const Login = () => {
     <div className="text-center mt-5">
       <h1>Login</h1>
       {!!token ? (
-        <nav className="navbar navbar-light bg-light">
-          <div className="container">
-            <button
-              onClick={() => actions.logout()}
-              className="btn btn-primary"
-            >
-              Log out
-            </button>
-          </div>
-        </nav>
+        <h1>I will be replaced with a beautiful page</h1>
       ) : (
         <div>
           <input
