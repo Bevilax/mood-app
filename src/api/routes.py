@@ -9,6 +9,7 @@ from flask_jwt_extended import get_jwt_identity
 from flask_jwt_extended import jwt_required
 from flask_jwt_extended import JWTManager
 import os
+import requests
 
 api = Blueprint('api', __name__)
 
@@ -44,3 +45,9 @@ def register():
         return jsonify({"msg": "You created your account"}), 201
     else:
         return jsonify({"msg": "Your account already exists, please sign in"}), 406
+    
+@api.route("/event/<int:zipcode>")
+def getEventByZip(zipcode):
+    url = "https://api.seatgeek.com/2/events?postal_code={zipcode}&client_id=Mjc0NDkwMDl8MTY1NTI1MDI4Ny4yNTc1MjM4"
+    resp = requests.get(url.format(zipcode=zipcode))
+    return resp.json()

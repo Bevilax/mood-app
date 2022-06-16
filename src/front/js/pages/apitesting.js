@@ -1,21 +1,21 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
-import { getEventByZipCode } from "../api";
+import { Context } from "../store/appContext";
 
 export const ApiTesting = () => {
-  const [events, setEvents] = React.useState({});
+  const { store, actions } = useContext(Context);
+  // const [events, setEvents] = React.useState({});
 
-  const params = useParams();
+  // const params = useParams();
 
   React.useEffect(() => {
-    getEventByZipCode();
-  });
+    actions.getEventByZip(95125);
+  }, []);
 
   return (
     <div>
-      {/* events.venue.name */}
       <h1>hello api</h1>
-      {events !== null ? events.venue.name : ""}
+      {JSON.stringify(store.events)}
     </div>
   );
 };
