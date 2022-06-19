@@ -4,7 +4,6 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
-import { Login } from "./pages/login";
 import { Register } from "./pages/register";
 import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
@@ -26,7 +25,7 @@ const Layout = () => {
           <Navbar />
           <Switch>
             <Route exact path="/">
-              <Login />
+              <Home />
             </Route>
             <Route exact path="/register">
               <Register />

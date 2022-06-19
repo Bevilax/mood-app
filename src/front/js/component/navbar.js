@@ -21,12 +21,11 @@ export const Navbar = () => {
                 <button type="button" className="invisible" disabled></button>
               </Link>
             ) : (
-              <button
-                onClick={() => actions.logout()}
-                className="btn btn-primary"
-              >
-                Log out
-              </button>
+              <div className="logout">
+                <button onClick={() => actions.logout()} className="btn btn">
+                  Log out
+                </button>
+              </div>
             )}
           </div>
         </div>
