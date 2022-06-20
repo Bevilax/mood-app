@@ -21,11 +21,9 @@ export const Navbar = () => {
                 <button type="button" className="invisible" disabled></button>
               </Link>
             ) : (
-              <div className="logout">
-                <button onClick={() => actions.logout()} className="btn btn">
-                  Log out
-                </button>
-              </div>
+              <button onClick={() => actions.logout()} className="logout">
+                <span className="layer"> Log out</span>
+              </button>
             )}
           </div>
         </div>
