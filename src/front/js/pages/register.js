@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import "../../styles/home.css";
 import { useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
+import moodyImageUrl from "../../img/moody.png";
 
 export const Register = () => {
   const [email, setEmail] = useState("");
@@ -11,7 +12,11 @@ export const Register = () => {
 
   const handleClick = () => {
     actions.register(email, password).then(() => {
-      history.push("/");
+      if (email == "" && password == "") {
+        alert("Cannot be empty");
+      } else {
+        history.push("/");
+      }
     });
   };
   return (

@@ -36,16 +36,18 @@ const getState = ({ getStore, getActions, setStore }) => {
             opts
           );
 
-          if (resp.status !== 200) {
+          if (resp.status !== 201) {
             alert("Account already exists, please log in!");
-            return false;
+            // return false;
+          } else if (resp.status == 201) {
+            alert("You created your account");
           }
 
-          const data = await resp.json();
-          console.log(data);
-          sessionStorage.setItem("token", data.access_token);
-          setStore({ token: data.access_token });
-          return true;
+          // const data = await resp.json();
+          // console.log(data);
+          // sessionStorage.setItem("token", data.access_token);
+          // setStore({ token: data.access_token });
+          // return true;
         } catch (error) {
           console.error("There has been an error logging in!");
         }

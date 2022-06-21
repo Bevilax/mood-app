@@ -12,7 +12,7 @@ export const Navbar = () => {
         <div className="container">
           <Link to="/">
             <span className="navbar-brand mb-0 h1">
-              <img src="moody.png" width="100" height="70" />
+              <img src={moodyImageUrl} width="170" height="120" />
             </span>
           </Link>
           <div className="ml-auto">

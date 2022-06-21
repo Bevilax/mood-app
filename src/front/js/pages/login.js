@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { useHistory } from "react-router-dom";
+import backgroundyImageUrl from "../../img/backgroundy.png";
 import "../../styles/login.css";
 
 export const Login = () => {
@@ -23,7 +24,11 @@ export const Login = () => {
         {!!token ? (
           <h1>I will be replaced with a beautiful page</h1>
         ) : (
-          <div>
+          <div
+            style={{
+              backgroundImage: `url(${backgroundyImageUrl})`,
+            }}
+          >
             <h1 className="Loglog">Login</h1>
             <div>
               <input
