@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import { EventCard } from "../component/eventcard";
 
 export const ApiTesting = () => {
   const { store, actions } = useContext(Context);
@@ -15,6 +16,7 @@ export const ApiTesting = () => {
   return (
     <div>
       <h1>hello api</h1>
+      <EventCard />
       {JSON.stringify(store.events)}
     </div>
   );
