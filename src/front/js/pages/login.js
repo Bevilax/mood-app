@@ -3,6 +3,7 @@ import { Context } from "../store/appContext";
 import { useHistory } from "react-router-dom";
 import backgroundyImageUrl from "../../img/backgroundy.png";
 import "../../styles/login.css";
+import { Emotions } from "./emotions";
 
 export const Login = () => {
   const { store, actions } = useContext(Context);
@@ -22,7 +23,7 @@ export const Login = () => {
     <div className="whole">
       <div className="text-center mt-5">
         {!!token ? (
-          <h1>I will be replaced with a beautiful page</h1>
+          <Emotions />
         ) : (
           <div
             style={{
