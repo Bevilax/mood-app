@@ -2,7 +2,9 @@
   animation: fadeInAnimation ease 5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   /* animation: mymove 5s infinite; */
 }
 .fadingout {
