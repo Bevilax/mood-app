@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../../styles/emotions.css";
+import { Context } from "../store/appContext";
 
 export const Emotions = () => {
+  const { store, actions } = useContext(Context);
   return (
     // <div
     //   classNameName="emotions-body"
@@ -42,6 +44,9 @@ export const Emotions = () => {
         className="btn-check"
         id="btncheck2"
         autocomplete="off"
+        onClick={() => {
+          actions.getEventByZipAndTaxonomy(95125, 1000000);
+        }}
       />
       <label className="btn btn-outline fadingout" for="btncheck2">
         Happy

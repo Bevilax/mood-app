@@ -94,6 +94,30 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((resp) => resp.json())
           .then((data) => setStore({ events: data }));
       },
+      getEventByZipAndTaxonomy: async (zip, taxonomy) => {
+        console.log(zip + " " + taxonomy);
+        let store = getStore();
+
+        try {
+          const resp = await fetch(
+            "https://api.seatgeek.com/2/events?postal_code=" +
+              zip +
+              "&taxonomies.id=" +
+              taxonomy +
+              "&sort=score.desc&client_id=Mjc0NDkwMDl8MTY1NTI1MDI4Ny4yNTc1MjM4"
+          );
+          const data = await resp.json();
+          if (data.events) {
+            setStore({
+              events: data.events,
+            });
+            console.log(data.events);
+            console.log(store.events);
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      },
     },
   };
 };

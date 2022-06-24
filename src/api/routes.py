@@ -13,6 +13,8 @@ import requests
 
 api = Blueprint('api', __name__)
 
+
+
 @api.route("/protected", methods=["GET"])
 @jwt_required()
 def protected():
@@ -48,6 +50,12 @@ def register():
     
 @api.route("/event/<int:zipcode>")
 def getEventByZip(zipcode):
-    url = "https://api.seatgeek.com/2/events?postal_code={zipcode}&client_id=Mjc0NDkwMDl8MTY1NTI1MDI4Ny4yNTc1MjM4"
+    url = "https://api.seatgeek.com/2/events?postal_code={zipcode}&sort=score.desc&client_id=Mjc0NDkwMDl8MTY1NTI1MDI4Ny4yNTc1MjM4"
+    resp = requests.get(url.format(zipcode=zipcode))
+    return resp.json()
+
+@api.route("/event/<int:zipcode>/<int:taxonomy>")
+def getEventByZipAndTaxonomy(zipcode, taxonomy):
+    url = "https://api.seatgeek.com/2/events?postal_code={zipcode}&taxonomies.id={taxonomy}&sort=score.desc&client_id=Mjc0NDkwMDl8MTY1NTI1MDI4Ny4yNTc1MjM4"
     resp = requests.get(url.format(zipcode=zipcode))
     return resp.json()
