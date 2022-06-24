@@ -1,16 +1,60 @@
 import React from "react";
+import "../../styles/emotions.css";
 
 export const Emotions = () => {
   return (
-    <div>
+    // <div
+    //   classNameName="emotions-body"
+    //   role="group"
+    //   aria-label="Basic checkbox toggle button group"
+    // >
+    //   <input
+    //     type="checkbox"
+    //     classNameName="btn-check"
+    //     autocomplete="off"
+    //     id="btncheck1"
+    //   ></input>
+    //   <label classNameName="btn" for="btncheck1">
+    //     Single toggle
+    //   </label>
+    //   <input type="checkbox" classNameName="btn-check" autocomplete="off"></input>
+    //   <label classNameName="btn fadingout" for="btn-check-outlined">
+    //     Single toggle2
+    //   </label>
+    //   <input type="checkbox" classNameName="btn-check" autocomplete="off"></input>
+    //   <label classNameName="btn fadingout" for="btn-check-outlined">
+    //     Single toggle3
+    //   </label>
+    // </div>
+    <div className="btn emotions-body" role="group">
       <input
         type="checkbox"
-        class="btn-check"
-        id="btn-check-outlined"
+        className="btn-check"
+        id="btncheck1"
         autocomplete="off"
-      ></input>
-      <label class="btn btn-outline-primary" for="btn-check-outlined">
-        Single toggle
+      />
+      <label className="btn btn-outline fadingout" for="btncheck1">
+        Adventurous
+      </label>
+
+      <input
+        type="checkbox"
+        className="btn-check"
+        id="btncheck2"
+        autocomplete="off"
+      />
+      <label className="btn btn-outline fadingout" for="btncheck2">
+        Happy
+      </label>
+
+      <input
+        type="checkbox"
+        className="btn-check"
+        id="btncheck3"
+        autocomplete="off"
+      />
+      <label className="btn btn-outline fadingout" for="btncheck3">
+        Angry
       </label>
     </div>
   );
