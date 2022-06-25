@@ -1,19 +1,17 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import "../../styles/emotions.css";
 import { Context } from "../store/appContext";
-import { EventCard } from "../component/eventcard";
 
-export const ApiTesting = () => {
+export const EventsPage = () => {
   const { store, actions } = useContext(Context);
 
   React.useEffect(() => {
-    actions.getEventByZip(95125);
+    actions.getEventByZipAndTaxonomy();
   }, []);
-
   return (
     <div>
-      <h1>hello api</h1>
-      <EventCard />
+      <h3>Event results below:</h3>
+      <br></br>
       {JSON.stringify(store.events)}
     </div>
   );

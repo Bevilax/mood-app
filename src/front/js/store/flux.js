@@ -19,6 +19,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     },
     actions: {
       // Use getActions to call a function within a fuction
+
       register: async (email, password) => {
         const opts = {
           method: "POST",
