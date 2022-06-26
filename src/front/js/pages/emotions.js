@@ -49,9 +49,7 @@ export const Emotions = () => {
       <label className="btn btn-outline fadingout" for="btncheck3">
         Angry
       </label>
-      <div>
-        <EventsPage />
-      </div>
+      <div>{/* <EventsPage /> */}</div>
     </div>
   );
 };
