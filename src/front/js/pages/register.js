@@ -39,7 +39,7 @@ export const Register = () => {
       ></input>
       <br />
       <br />
-      <button className="CreateAccount" onClick={handleClick}>
+      <button className="buttonCreateAccount" onClick={handleClick}>
         Create an Account
       </button>
     </div>
