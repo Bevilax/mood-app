@@ -28,12 +28,16 @@ export const Register = () => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       ></input>
+      <br />
+      <br />
       <input
         type="password"
         placeholder="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       ></input>
+      <br />
+      <br />
       <button onClick={handleClick}>Create an Account</button>
     </div>
   );
