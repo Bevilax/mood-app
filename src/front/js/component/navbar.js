@@ -22,7 +22,7 @@ export const Navbar = () => {
               </Link>
             ) : (
               <button onClick={() => actions.logout()} className="logout">
-                <span className="layer"> Log out</span>
+                Log out
               </button>
             )}
           </div>

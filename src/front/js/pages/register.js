@@ -3,6 +3,7 @@ import "../../styles/home.css";
 import { useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
 import moodyImageUrl from "../../img/moody.png";
+import "../../styles/registration.css";
 
 export const Register = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +22,7 @@ export const Register = () => {
   };
   return (
     <div>
-      <h1>New user registration</h1>
+      <h1 className="RegistrationSentence">User registration</h1>
       <input
         type="text"
         placeholder="email"
@@ -38,7 +39,9 @@ export const Register = () => {
       ></input>
       <br />
       <br />
-      <button onClick={handleClick}>Create an Account</button>
+      <button className="CreateAccount" onClick={handleClick}>
+        Create an Account
+      </button>
     </div>
   );
 };
