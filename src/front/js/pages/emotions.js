@@ -37,7 +37,7 @@ export const Emotions = () => {
       />
 
       <label className="btn btn-outline fadingout" for="btncheck2">
-        Happy
+        Energetic
       </label>
 
       <input
@@ -47,7 +47,52 @@ export const Emotions = () => {
         autocomplete="off"
       />
       <label className="btn btn-outline fadingout" for="btncheck3">
-        Angry
+        Artistic
+      </label>
+      <input
+        type="checkbox"
+        className="btn-check"
+        id="btncheck3"
+        autocomplete="off"
+      />
+      <label className="btn btn-outline fadingout" for="btncheck3">
+        Introspective
+      </label>
+      <input
+        type="checkbox"
+        className="btn-check"
+        id="btncheck3"
+        autocomplete="off"
+      />
+      <label className="btn btn-outline fadingout" for="btncheck3">
+        Social
+      </label>
+      <input
+        type="checkbox"
+        className="btn-check"
+        id="btncheck3"
+        autocomplete="off"
+      />
+      <label className="btn btn-outline fadingout" for="btncheck3">
+        Lonely
+      </label>
+      <input
+        type="checkbox"
+        className="btn-check"
+        id="btncheck3"
+        autocomplete="off"
+      />
+      <label className="btn btn-outline fadingout" for="btncheck3">
+        Sad
+      </label>
+      <input
+        type="checkbox"
+        className="btn-check"
+        id="btncheck3"
+        autocomplete="off"
+      />
+      <label className="btn btn-outline fadingout" for="btncheck3">
+        Something
       </label>
       <div>{/* <EventsPage /> */}</div>
     </div>
