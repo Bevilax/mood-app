@@ -4,3 +4,25 @@
   font-family: Fascinate;
   color: rgb(248, 113, 136);
 }
+
+.backgroundImage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 725px;
+}
+.Form {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.logForm {
+  margin: auto;
+  width: 50%;
+  padding-top: 160px;
+  padding-left: 110px;
+}
+.CreateAccount {
+  margin-left: 100px;
+}

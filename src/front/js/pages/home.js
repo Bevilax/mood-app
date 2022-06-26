@@ -11,8 +11,9 @@ export const Home = () => {
 
   return (
     <div>
+      <p className="FeelingModdy">Feeling Moody? Find what to do!</p>
       <Login />
-      {token ? "" : <CreateAccount />}
+      {/* {token ? "" : <CreateAccount />} */}
     </div>
   );
 };

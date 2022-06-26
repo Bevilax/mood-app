@@ -11,8 +11,8 @@ export const Navbar = () => {
       <nav className="navbar">
         <div className="container">
           <Link to="/">
-            <span className="navbar-brand mb-0 h1">
-              <img src={moodyImageUrl} width="170" height="120" />
+            <span className="image">
+              <img src={moodyImageUrl} width="600" height="150" />
             </span>
           </Link>
           <div className="ml-auto">

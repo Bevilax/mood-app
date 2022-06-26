@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Fascinate&display=swap");
 
 .NavNav {
-  background-color: rgb(255, 144, 77);
+  background-color: rgb(255, 189, 88);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.image {
+  margin-left: 320px;
 }
 
 .logout {

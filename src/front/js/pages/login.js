@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import backgroundyImageUrl from "../../img/backgroundy.png";
 import "../../styles/login.css";
 import { Emotions } from "./emotions";
+import { CreateAccount } from "../component/createaccount";
 
 export const Login = () => {
   const { store, actions } = useContext(Context);
@@ -21,30 +22,40 @@ export const Login = () => {
 
   return [
     <div className="whole">
-      <div className="text-center mt-5">
+      <div className="text-center mt-5 Form">
         {!!token ? (
           <Emotions />
         ) : (
           <div
+            className="backgroundImage"
             style={{
               backgroundImage: `url(${backgroundyImageUrl})`,
             }}
           >
-            <h1 className="Loglog">Login</h1>
-            <div>
-              <input
-                type="text"
-                placeholder="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              ></input>
-              <input
-                type="password"
-                placeholder="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              ></input>
-              <button onClick={handleClick}>Login</button>
+            <div className="logForm">
+              <h1 className="Loglog">Login</h1>
+              <div>
+                <input
+                  type="text"
+                  placeholder="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                ></input>
+                <br />
+                <br />
+                <input
+                  type="password"
+                  placeholder="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                ></input>
+                <br />
+                <br />
+                <button onClick={handleClick}>Login</button>
+              </div>
+            </div>
+            <div className="CreateAccount">
+              <CreateAccount />
             </div>
           </div>
         )}
