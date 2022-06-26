@@ -20,7 +20,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     actions: {
       // Use getActions to call a function within a fuction
 
-      register: async (email, password) => {
+      register: async (email, password, zipcode) => {
         const opts = {
           method: "POST",
           headers: {
@@ -29,6 +29,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           body: JSON.stringify({
             email: email,
             password: password,
+            zipcode: zipcode,
           }),
         };
         try {

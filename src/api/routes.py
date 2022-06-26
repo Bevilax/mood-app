@@ -37,11 +37,12 @@ def login():
 def register():
     email = request.json.get("email", None)
     password = request.json.get("password", None)
+    zipcode = request.json.get("zipcode", None)
     user = User.query.filter_by(email=email).one_or_none()
     print(email)
     print(user)
     if user is None:
-        user = User(email=email, password=password, is_active=True)
+        user = User(email=email, password=password,zipcode=zipcode, is_active=True)
         db.session.add(user)
         db.session.commit()
         return jsonify({"msg": "You created your account"}), 201
