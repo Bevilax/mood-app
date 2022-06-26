@@ -51,7 +51,9 @@ export const Login = () => {
                 ></input>
                 <br />
                 <br />
-                <button onClick={handleClick}>Login</button>
+                <button className="LoginButton" onClick={handleClick}>
+                  Login
+                </button>
               </div>
             </div>
             <div className="CreateAccount">
