@@ -11,6 +11,7 @@
   background-size: cover;
   height: 725px;
 }
+
 .Form {
   margin: auto;
   width: 60%;
@@ -25,4 +26,15 @@
 }
 .CreateAccount {
   margin-left: 100px;
+}
+
+.LoginButton {
+  display: inline-block;
+  background-color: rgb(140, 82, 255);
+  padding: 5px 10px;
+  border-radius: 12px;
+  color: white;
+  font-family: Fascinate;
+  border: 0;
+  outline: 0;
 }
