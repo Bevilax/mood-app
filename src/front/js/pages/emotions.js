@@ -6,12 +6,12 @@ import { EventsPage } from "./eventspage";
 
 export const Emotions = () => {
   const { store, actions } = useContext(Context);
-  // const history = useHistory();
-  // const getResults = () => {
-  //   actions.getResults().then(() => {
-  //     history.push("/eventspage");
-  //   });
-  // };
+  const history = useHistory();
+  const getResults = () => {
+    actions.getResults().then(() => {
+      history.push("/eventspage");
+    });
+  };
   return (
     <div className="btn emotions-body" role="group">
       <input
@@ -94,7 +94,19 @@ export const Emotions = () => {
       <label className="btn btn-outline fadingout" for="btncheck8">
         Something
       </label>
-      <div>{/* <EventsPage /> */}</div>
+      <input
+        type="checkbox"
+        className="btn-check"
+        id="btncheck9"
+        autocomplete="off"
+        onClick={() => {
+          history.push("/events");
+        }}
+      />
+      <label className="btn btn-outline fadingout" for="btncheck9">
+        GET EVENTS
+      </label>
+      <div></div>
     </div>
   );
 };

@@ -38,6 +38,9 @@ const Layout = () => {
             <Route exact path="/emotions">
               <Emotions />
             </Route>
+            <Route exact path="/events">
+              <EventsPage />
+            </Route>
 
             <Route>
               <h1>Not found!</h1>
