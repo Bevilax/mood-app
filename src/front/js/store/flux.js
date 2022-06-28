@@ -19,6 +19,28 @@ const getState = ({ getStore, getActions, setStore }) => {
     },
     actions: {
       // Use getActions to call a function within a fuction
+      eventData: async (taxonomy, zip) => {
+        console.log("clicked");
+        const opts = {
+          method: "POST",
+          headers: {
+            "Content=Type": "application/json",
+          },
+          body: JSON.stringify({
+            taxonomy: taxonomy,
+            zip: zip,
+          }),
+        };
+
+        try {
+          const resp = await fetch(
+            process.env.BACKEND_URL + `/api/event/eventlog`,
+            opts
+          );
+        } catch (error) {
+          console.error("There has been an error!");
+        }
+      },
 
       register: async (email, password, zipcode) => {
         const opts = {

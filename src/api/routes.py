@@ -60,3 +60,16 @@ def getEventByZipAndTaxonomy(zipcode, taxonomy):
     url = "https://api.seatgeek.com/2/events?postal_code={zipcode}&taxonomies.id={taxonomy}&sort=score.desc&client_id=Mjc0NDkwMDl8MTY1NTI1MDI4Ny4yNTc1MjM4"
     resp = requests.get(url.format(zipcode=zipcode))
     return resp.json()
+
+@api.route("/event/eventlog")
+def getEvents():
+    payload = request.get_json()
+
+    event = Events(taxonomy_id=taxonomy_id, zip_code=zip_code)
+    db.session.add(event)
+    db.session.commit()
+    if event is None:
+        return jsonify({"msg": "Event created"})
+    else:
+        return jsonify({"msg": "Error"})
+        

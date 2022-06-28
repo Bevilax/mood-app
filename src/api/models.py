@@ -4,6 +4,20 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 db = SQLAlchemy()
 
+class Events(db.Model):
+    taxonomy_id = db.Column(db.Integer, primary_key=True)
+    zip_code = db.Column(db.Integer, primary_key=False)
+
+    def __repr__(self):
+        return '<Events {}>'.format(self.zip_code)
+
+    def serialize(self):
+        return {
+            "taxonomy_id": self.taxonomy_id,
+            "zip_code": self.zip_code
+        }
+
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
