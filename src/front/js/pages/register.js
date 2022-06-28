@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import "../../styles/home.css";
 import { useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
-import moodyImageUrl from "../../img/moody.png";
+import backgroundyImageUrl from "../../img/backgroundy.png";
 import "../../styles/registration.css";
 
 export const Register = () => {
@@ -22,35 +22,46 @@ export const Register = () => {
     });
   };
   return (
-    <div>
-      <h1 className="RegistrationSentence">User registration</h1>
-      <input
-        type="text"
-        placeholder="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      ></input>
-      <br />
-      <br />
-      <input
-        type="password"
-        placeholder="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      ></input>
-      <br />
-      <br />
-      <input
-        type="zipcode"
-        placeholder="zipcode"
-        value={zipcode}
-        onChange={(e) => setZipcode(e.target.value)}
-      ></input>
-      <br />
-      <br />
-      <button className="buttonCreateAccount" onClick={handleClick}>
-        Create an Account
-      </button>
+    <div className="whole">
+      <div className="RegistrationForm">
+        <div
+          className="backgroundImage2"
+          style={{
+            backgroundImage: `url(${backgroundyImageUrl})`,
+          }}
+        >
+          <h1 className="RegistrationSentence">Registration</h1>
+          <div className="ActualRegistrationForm">
+            <input
+              type="text"
+              placeholder="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            ></input>
+            <br />
+            <br />
+            <input
+              type="password"
+              placeholder="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            ></input>
+            <br />
+            <br />
+            <input
+              type="zipcode"
+              placeholder="zipcode"
+              value={zipcode}
+              onChange={(e) => setZipcode(e.target.value)}
+            ></input>
+            <br />
+            <br />
+            <button className="buttonCreateAccount" onClick={handleClick}>
+              Create an Account
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

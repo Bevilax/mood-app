@@ -1,6 +1,14 @@
 .RegistrationSentence {
   font-family: Fascinate;
   color: rgb(248, 113, 136);
+  margin-left: 50px !important;
+}
+
+.backgroundImage2 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 725px;
 }
 
 .buttonCreateAccount {
@@ -12,4 +20,17 @@
   font-family: Fascinate;
   border: 0;
   outline: 0;
+}
+
+.RegistrationForm {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.ActualRegistrationForm {
+  margin: auto;
+  width: 50%;
+  padding-top: 160px;
+  padding-left: 110px;
 }
