@@ -27,6 +27,7 @@ class User(db.Model):
 
     def __repr__(self):
         return '<User {}>'.format(self.email)
+        return '<User {}>'.format(self.zipcode)
 
     def serialize(self):
         return {
