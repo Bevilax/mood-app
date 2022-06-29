@@ -1,7 +1,7 @@
 .RegistrationSentence {
   font-family: Fascinate;
   color: rgb(248, 113, 136);
-  margin-left: 50px !important;
+  margin-left: 0.002px;
 }
 
 .backgroundImage2 {
@@ -22,15 +22,9 @@
   outline: 0;
 }
 
-.RegistrationForm {
-  margin: auto;
-  width: 60%;
-  padding: 10px;
-}
-
 .ActualRegistrationForm {
   margin: auto;
   width: 50%;
   padding-top: 160px;
-  padding-left: 110px;
+  padding-left: 140px;
 }

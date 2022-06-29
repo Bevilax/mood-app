@@ -6,7 +6,7 @@ from flask_admin.contrib.sqla import ModelView
 from wtforms.fields import PasswordField
 
 class UserView(ModelView):
-    column_list = ['email', 'is_active']
+    column_list = ['email', 'zipcode', 'is_active']
     column_editable_list = ['is_active',]
     column_exclude_list = ['_password', ]
     create_modal = True
