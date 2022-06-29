@@ -13,7 +13,7 @@ export const Register = () => {
   const history = useHistory();
 
   const handleClick = () => {
-    actions.register(email, password).then(() => {
+    actions.register(email, password, zipcode).then(() => {
       if (email == "" && password == "" && zipcode == "") {
         alert("Cannot be empty");
       } else {
@@ -49,7 +49,7 @@ export const Register = () => {
             <br />
             <br />
             <input
-              type="zipcode"
+              type="text"
               placeholder="zipcode"
               value={zipcode}
               onChange={(e) => setZipcode(e.target.value)}

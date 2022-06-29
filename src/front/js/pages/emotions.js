@@ -33,7 +33,7 @@ export const Emotions = () => {
         className="btn-check"
         id="btncheck2"
         autocomplete="off"
-        value="test"
+        value="taxonomy"
         onClick={(e) => {
           setTaxonomy(e.target.value);
         }}
