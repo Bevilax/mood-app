@@ -9,11 +9,13 @@ export const Emotions = () => {
   const [zip, setZip] = useState("");
   const [taxonomy, setTaxonomy] = useState("");
   const history = useHistory();
-  const getResults = () => {
-    actions.getResults().then(() => {
-      history.push("/eventspage");
-    });
-  };
+
+  // const getResults = () => {
+  //   actions.getResults().then(() => {
+  //     history.push("/eventspage");
+  //   });
+  // };
+
   return (
     <div className="btn emotions-body" role="group">
       <input

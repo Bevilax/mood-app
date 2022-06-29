@@ -78,7 +78,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       logout: () => {
         sessionStorage.removeItem("token");
-        console.log("You are logout");
+        console.log("You've been logged out");
         setStore({ token: null });
       },
 
