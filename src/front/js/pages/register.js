@@ -31,35 +31,6 @@ export const Register = () => {
           }}
         >
           <div className="ActualRegistrationForm">
-<<<<<<< HEAD
-            <input
-              type="text"
-              placeholder="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            ></input>
-            <br />
-            <br />
-            <input
-              type="password"
-              placeholder="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            ></input>
-            <br />
-            <br />
-            <input
-              type="text"
-              placeholder="zipcode"
-              value={zipcode}
-              onChange={(e) => setZipcode(e.target.value)}
-            ></input>
-            <br />
-            <br />
-            <button className="buttonCreateAccount" onClick={handleClick}>
-              Create an Account
-            </button>
-=======
             <h1 className="RegistrationSentence">Registration</h1>
             <div>
               <input
@@ -90,7 +61,6 @@ export const Register = () => {
                 Create an Account
               </button>
             </div>
->>>>>>> b8d60fbdfb4b32bc6ffa1003d12db46a813c5774
           </div>
         </div>
       </div>
