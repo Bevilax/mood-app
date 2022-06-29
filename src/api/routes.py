@@ -30,7 +30,9 @@ def login():
     if user is not None:
         if user.check_password_hash(password):
             access_token = create_access_token(identity=email)
-            return jsonify(access_token=access_token)
+            payload = {"token": access_token,
+                        "user": user.serialize()}
+            return jsonify(payload)
     return jsonify({"msg": "Invalid cedentials."}), 401
 
 @api.route("/register", methods=["POST"])
@@ -61,15 +63,15 @@ def getEventByZipAndTaxonomy(zipcode, taxonomy):
     resp = requests.get(url.format(zipcode=zipcode))
     return resp.json()
 
-@api.route("/event/eventlog")
-def getEvents():
-    payload = request.get_json()
+# @api.route("/event/eventlog")
+# def getEvents():
+#     payload = request.get_json()
 
-    event = Events(taxonomy_id=taxonomy_id, zip_code=zip_code)
-    db.session.add(event)
-    db.session.commit()
-    if event is None:
-        return jsonify({"msg": "Event created"})
-    else:
-        return jsonify({"msg": "Error"})
+#     event = Events(taxonomy_id=taxonomy_id, zip_code=zip_code)
+#     db.session.add(event)
+#     db.session.commit()
+#     if event is None:
+#         return jsonify({"msg": "Event created"})
+#     else:
+#         return jsonify({"msg": "Error"})
         

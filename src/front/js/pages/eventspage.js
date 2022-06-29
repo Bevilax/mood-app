@@ -8,17 +8,17 @@ export const EventsPage = () => {
   const [results, setResults] = React.useState([]);
   const ourFunction = actions.getEventByZipAndTaxonomy();
 
-  React.useEffect(() => {
-    actions.getEventByZipAndTaxonomy(95125, 1000000);
-  }, []);
+  // React.useEffect(() => {
+  //   actions.getEventByZipAndTaxonomy(95125, 1000000);
+  // }, []);
 
-  React.useEffect(() => {
-    const fn = async () => {
-      const apiResults = await ourFunction;
-      setResults(apiResults);
-    };
-    fn();
-  }, []);
+  // React.useEffect(() => {
+  //   const fn = async () => {
+  //     const apiResults = await ourFunction;
+  //     setResults(apiResults);
+  //   };
+  //   fn();
+  // }, []);
   return (
     <div>
       {/* <h3>Event results below:</h3>

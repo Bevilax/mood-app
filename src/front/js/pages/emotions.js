@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import "../../styles/emotions.css";
 import { Context } from "../store/appContext";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { EventsPage } from "./eventspage";
 
 export const Emotions = () => {
@@ -23,21 +23,23 @@ export const Emotions = () => {
         className="btn-check"
         id="btncheck1"
         autocomplete="off"
+        onClick={(e) => {
+          actions.getEventByZipAndTaxonomy(3000000);
+        }}
       />
-      <div a href={"/eventspage/"}>
-        <label className="btn btn-outline fadingout" for="btncheck1">
-          Adventurous
-        </label>
-      </div>
+
+      <label className="btn btn-outline fadingout" for="btncheck1">
+        Adventurous
+      </label>
 
       <input
         type="checkbox"
         className="btn-check"
         id="btncheck2"
         autocomplete="off"
-        value="taxonomy"
         onClick={(e) => {
-          setTaxonomy(e.target.value);
+          actions.getEventByZipAndTaxonomy(1000000);
+          actions.getEventByZipAndTaxonomy(2000000);
         }}
       />
 
@@ -108,22 +110,12 @@ export const Emotions = () => {
           history.push("/events");
         }}
       />
-      <input
-        type="text"
-        placeholder="zip code"
-        value={zip}
-        onChange={(e) => setZip(e.target.value)}
-      ></input>
-      <button
-        onClick={() => {
-          actions.eventData(taxonomy, zip);
-        }}
-        className="btn btn-outline fadingout"
-        for="btncheck9"
-      >
-        GET EVENTS
-      </button>
-      <div></div>
+      <Link to="/events">
+        {" "}
+        <button className="btn btn-outline fadingout" for="btncheck9">
+          GET EVENTS
+        </button>
+      </Link>
     </div>
   );
 };

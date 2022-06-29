@@ -1,7 +1,8 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
-      events: {},
+      events: [],
+      user: {},
       token: null,
       message: null,
       demo: [
@@ -19,28 +20,28 @@ const getState = ({ getStore, getActions, setStore }) => {
     },
     actions: {
       // Use getActions to call a function within a fuction
-      eventData: async (taxonomy, zip) => {
-        console.log("clicked");
-        const opts = {
-          method: "POST",
-          headers: {
-            "Content=Type": "application/json",
-          },
-          body: JSON.stringify({
-            taxonomy: taxonomy,
-            zip: zip,
-          }),
-        };
+      // eventData: async (taxonomy) => {
+      //   console.log("clicked");
+      //   const opts = {
+      //     method: "POST",
+      //     headers: {
+      //       "Content=Type": "application/json",
+      //     },
+      //     body: JSON.stringify({
+      //       taxonomy: taxonomy,
+      //       zip: User.zipcode,
+      //     }),
+      //   };
 
-        try {
-          const resp = await fetch(
-            process.env.BACKEND_URL + `/api/event/eventlog`,
-            opts
-          );
-        } catch (error) {
-          console.error("There has been an error!");
-        }
-      },
+      //   try {
+      //     const resp = await fetch(
+      //       process.env.BACKEND_URL + `/api/event/eventlog`,
+      //       opts
+      //     );
+      //   } catch (error) {
+      //     console.error("There has been an error!");
+      //   }
+      // },
 
       register: async (email, password, zipcode) => {
         const opts = {
@@ -107,7 +108,9 @@ const getState = ({ getStore, getActions, setStore }) => {
           const data = await resp.json();
           console.log(data);
           sessionStorage.setItem("token", data.access_token);
-          setStore({ token: data.access_token });
+          setStore({ token: data.token });
+          setStore({ user: data.user });
+          console.log(data);
           return true;
         } catch (error) {
           console.error("There has been an error logging in!");
@@ -118,25 +121,24 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((resp) => resp.json())
           .then((data) => setStore({ events: data }));
       },
-      getEventByZipAndTaxonomy: async (zip, taxonomy) => {
-        console.log(zip + " " + taxonomy);
+      getEventByZipAndTaxonomy: async (taxonomy) => {
+        console.log(taxonomy);
         let store = getStore();
 
         try {
           const resp = await fetch(
             "https://api.seatgeek.com/2/events?postal_code=" +
-              zip +
+              store.user.zipcode +
               "&taxonomies.id=" +
               taxonomy +
               "&sort=score.desc&client_id=Mjc0NDkwMDl8MTY1NTI1MDI4Ny4yNTc1MjM4"
           );
           const data = await resp.json();
           if (data.events) {
-            setStore({
-              events: data.events,
-            });
+            store.events.push(data.events);
+
             console.log(data.events);
-            console.log(store.events);
+            console.log("this is events from the store", store.events);
           }
         } catch (error) {
           console.log(error);
