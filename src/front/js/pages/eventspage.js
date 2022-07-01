@@ -6,23 +6,26 @@ import { EventCard } from "../component/eventcard";
 export const EventsPage = () => {
   const { store, actions } = useContext(Context);
   const [results, setResults] = React.useState([]);
-  const event = store.events;
+  // const event = store.events;
 
   React.useEffect(() => {
     const fn = async () => {
-      const apiEvents = await actions.getEventByZipAndTaxonomy();
+      const apiEvents = await store.events;
       setResults(apiEvents);
     };
     fn();
+    console.log("this is working");
   }, []);
 
   return (
     <div className="d-flex flex-row flex-nowrap overflow-auto">
-      {results.map((item, index) => (
-        <EventCard event={item} key={index} />
-      ))}
+      {React.Children.toArray(
+        results.map((results, index) => (
+          <EventCard title={results["title"]} key={index} />
+        ))
+      )}
     </div>
 
-    //   {JSON.stringify(store.events)}
+    // {JSON.stringify(store.events)}
   );
 };

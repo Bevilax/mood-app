@@ -19,30 +19,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       ],
     },
     actions: {
-      // Use getActions to call a function within a fuction
-      // eventData: async (taxonomy) => {
-      //   console.log("clicked");
-      //   const opts = {
-      //     method: "POST",
-      //     headers: {
-      //       "Content=Type": "application/json",
-      //     },
-      //     body: JSON.stringify({
-      //       taxonomy: taxonomy,
-      //       zip: User.zipcode,
-      //     }),
-      //   };
-
-      //   try {
-      //     const resp = await fetch(
-      //       process.env.BACKEND_URL + `/api/event/eventlog`,
-      //       opts
-      //     );
-      //   } catch (error) {
-      //     console.error("There has been an error!");
-      //   }
-      // },
-
       register: async (email, password, zipcode) => {
         const opts = {
           method: "POST",
@@ -67,12 +43,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           } else if (resp.status == 201) {
             alert("You created your account");
           }
-
-          // const data = await resp.json();
-          // console.log(data);
-          // sessionStorage.setItem("token", data.access_token);
-          // setStore({ token: data.access_token });
-          // return true;
         } catch (error) {
           console.error("There has been an error logging in!");
         }
