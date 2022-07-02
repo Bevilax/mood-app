@@ -18,10 +18,10 @@ export const EventsPage = () => {
   }, []);
 
   return (
-    <div className="container">
-      <div className="container vertical-scrollable">
-        <div className="row">
-          <div className="col">
+    <div className="eventview container">
+      <div className="row overflow-scroll">
+        <div className="vh-100 container">
+          <div>
             {results.map((eventOption, index) => (
               <EventCard
                 title={eventOption["title"]}
