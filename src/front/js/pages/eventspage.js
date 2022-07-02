@@ -18,16 +18,23 @@ export const EventsPage = () => {
   }, []);
 
   return (
-    <div className="d-flex flex-row flex-nowrap overflow-auto">
-      {results.map((eventOption, index) => (
-        <EventCard
-          title={eventOption["title"]}
-          type={eventOption["type"]}
-          key={index}
-        />
-      ))}
+    <div className="container">
+      <div className="container vertical-scrollable">
+        <div className="row">
+          <div className="col">
+            {results.map((eventOption, index) => (
+              <EventCard
+                title={eventOption["title"]}
+                type={eventOption["type"]}
+                key={index}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
 
     // {JSON.stringify(store.events)}
+    // <div className="d-flex flex-row flex-nowrap overflow-auto"></div>
   );
 };
