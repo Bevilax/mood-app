@@ -101,11 +101,11 @@ const getState = ({ getStore, getActions, setStore }) => {
               store.user.zipcode +
               "&taxonomies.id=" +
               taxonomy +
-              "&sort=score.desc&client_id=Mjc0NDkwMDl8MTY1NTI1MDI4Ny4yNTc1MjM4"
+              "&sort=score.desc&per_page=300&client_id=Mjc0NDkwMDl8MTY1NTI1MDI4Ny4yNTc1MjM4"
           );
           const data = await resp.json();
           if (data.events) {
-            store.events.push(data.events);
+            setStore({ events: data.events });
 
             console.log(data.events);
             console.log("this is events from the store", store.events);
