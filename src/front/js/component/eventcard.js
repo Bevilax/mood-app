@@ -8,8 +8,9 @@ export const EventCard = (props) => {
         <p>{props.title}</p>
         <p>{props.type}</p>
         <p>{props.eventtime}</p>
-        <p>{props.venuename}</p>
+        <p>Location: {props.venuename}</p>
         <p>{props.perName}</p>
+
         <img src={props.image} />
       </div>
     </div>
