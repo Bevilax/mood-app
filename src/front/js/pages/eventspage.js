@@ -26,6 +26,10 @@ export const EventsPage = () => {
               <EventCard
                 title={eventOption["title"]}
                 type={eventOption["type"]}
+                eventtime={eventOption?.["datetime_local"]}
+                venuename={eventOption?.venue?.["name"]}
+                image={eventOption?.performers[0]?.["image"]}
+                perName={eventOption?.performers[0]?.["type"]}
                 key={index}
               />
             ))}
