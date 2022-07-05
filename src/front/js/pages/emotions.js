@@ -27,6 +27,8 @@ export const Emotions = () => {
       />
 
       <label className="btn btn-outline fadingout" for="btncheck1">
+        <i class="fa-solid fa-broom-ball"></i>
+        <br />
         Adventurous
       </label>
 
@@ -48,6 +50,8 @@ export const Emotions = () => {
       />
 
       <label className="btn btn-outline fadingout" for="btncheck2">
+        <i class="fa-solid fa-bolt"></i>
+        <br />
         Energetic
       </label>
 
@@ -65,6 +69,8 @@ export const Emotions = () => {
         }}
       />
       <label className="btn btn-outline fadingout" for="btncheck3">
+        <i class="fa-solid fa-masks-theater"></i>
+        <br />
         Artistic
       </label>
       <input
@@ -79,6 +85,8 @@ export const Emotions = () => {
         }}
       />
       <label className="btn btn-outline fadingout" for="btncheck4">
+        <i class="fa-solid fa-head-side-virus"></i>
+        <br />
         Introspective
       </label>
       <input
@@ -94,6 +102,8 @@ export const Emotions = () => {
         }}
       />
       <label className="btn btn-outline fadingout" for="btncheck5">
+        <i class="fa-solid fa-users"></i>
+        <br />
         Social
       </label>
       <input
@@ -110,6 +120,8 @@ export const Emotions = () => {
         }}
       />
       <label className="btn btn-outline fadingout" for="btncheck6">
+        <i class="fa-solid fa-user"></i>
+        <br />
         Lonely
       </label>
       <input
@@ -124,6 +136,8 @@ export const Emotions = () => {
         }}
       />
       <label className="btn btn-outline fadingout" for="btncheck7">
+        <i class="fa-solid fa-face-sad-tear"></i>
+        <br />
         Sad
       </label>
       <input
@@ -138,6 +152,8 @@ export const Emotions = () => {
         }}
       />
       <label className="btn btn-outline fadingout" for="btncheck8">
+        <i class="fa-solid fa-face-tired"></i>
+        <br />
         Stressed
       </label>
       <input
@@ -149,12 +165,14 @@ export const Emotions = () => {
           history.push("/events");
         }}
       />
-      <Link to="/events">
-        {" "}
-        <button className="btn btn-outline fadingout" for="btncheck9">
-          GET EVENTS
-        </button>
-      </Link>
+      <div>
+        <Link to="/events">
+          {" "}
+          <button className="btn GetEvents" for="btncheck9">
+            Find Events
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

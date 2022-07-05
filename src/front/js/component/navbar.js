@@ -8,11 +8,11 @@ export const Navbar = () => {
   const { store, actions } = useContext(Context);
   return (
     <div className="NavNav">
-      <nav className="navbar">
+      <nav className="navbar ">
         <div className="container">
           <Link to="/">
             <span className="image">
-              <img src={moodyImageUrl} width="600" height="150" />
+              <img src={moodyImageUrl} width="600" height="500" />
             </span>
           </Link>
           <div className="ml-auto">

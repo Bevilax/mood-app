@@ -21,7 +21,7 @@ export const Login = () => {
   };
 
   return [
-    <div className="whole">
+    <div className="whole ">
       <div className="text-center mt-5 Form">
         {!!token ? (
           <Emotions />

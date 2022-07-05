@@ -3,16 +3,27 @@
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   display: block;
-  margin-left: auto;
+  margin-left: 100px;
   margin-right: auto;
-  /* position: center; */
+}
 
-  /* animation: mymove 5s infinite; */
+.GetEvents {
+  background-color: rgb(244, 86, 202);
+  border: none;
+  color: rgb(255, 189, 88);
+  padding: 10px 18px;
+  text-align: center;
+  font-size: 20px;
+  margin: 6px 6px 4px 10px;
+
+  border-radius: 15px;
+  font-family: Fascinate;
 }
 .fadingout {
-  background-color: #f41eed;
+  background-color: rgb(244, 86, 202);
   border: none;
-  color: white;
+  color: rgb(255, 189, 88);
+  font-family: Fascinate;
   padding: 10px 18px;
   text-align: center;
   font-size: 20px;
@@ -22,13 +33,9 @@
   border-radius: 15px;
 }
 input[type="checkbox"]:checked + label.fadingout {
-  background-color: red;
+  background-color: rgb(140, 82, 255);
   opacity: 1;
 }
-
-/* .btn-check:active {
-    background-color: black;
-  } */
 
 .fadingout:hover {
   opacity: 1;
@@ -42,11 +49,3 @@ input[type="checkbox"]:checked + label.fadingout {
     opacity: 1;
   }
 }
-/* @keyframes mymove {
-    from {
-      left: 0px;
-    }
-    to {
-      left: 200px;
-    }
-  } */
