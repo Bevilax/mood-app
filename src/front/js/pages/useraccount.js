@@ -5,6 +5,9 @@ import { Context } from "../store/appContext";
 import "../../styles/useraccount.css";
 
 export const UserAccount = () => {
+  const [zipcode, setZipcode] = useState("");
+
+  const handleClick = () => {};
   return [
     <div className="whole">
       <div className="text-center mt-5 Form">
@@ -15,15 +18,17 @@ export const UserAccount = () => {
 
             <br />
             <br />
-            {/* <input
-                type="text"
-                placeholder="zipcode"
-                value={zipcode}
-                onChange={(e) => setZipcode(e.target.value)}
-              ></input> */}
+            <input
+              type="text"
+              placeholder="zipcode"
+              value={zipcode}
+              onChange={(e) => setZipcode(e.target.value)}
+            ></input>
             <br />
             <br />
-            <button className="changezipcode">Change my Zip Code</button>
+            <button className="changezipcode" onClick={handleClick}>
+              Change my Zip Code
+            </button>
           </div>
         </div>
       </div>
