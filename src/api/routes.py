@@ -22,9 +22,27 @@ def protected():
     current_user = get_jwt_identity()
     return jsonify(logged_in_as=current_user), 200
 
-@api.route("/changezip", methods=["POST"])
-def changeZip():
+# @api.route("/updatezip/<int:id>", methods=["GET", "POST"])
+# def updateZip(id):
+#     zip_to_update = User.query.get_or_404(id)
+#     if request.method == "POST":
+#         zip_to_update.zipcode = 
+#     zipcode = request.json.get("zipcode", None)
+#     user = User.query.filter_by(email=email).one_or_none()
+#     if user is not None:
+#         zipcode = User(zipcode=zipcode)
+#         db.session.add(zipcode)
+#         db.session.commit()
+
+@api.route("/deletezip", methods=["DELETE"])
+def deleteZip():
     zipcode = request.json.get("zipcode", None)
+    user = User(zipcode)
+    db.session.delete(user)
+    db.session.commit()
+    
+
+
    
 
 @api.route("/token", methods=["POST"])
