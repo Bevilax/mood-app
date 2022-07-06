@@ -13,6 +13,7 @@ import { Footer } from "./component/footer";
 import { ApiTesting } from "./pages/apitesting";
 import { Emotions } from "./pages/emotions";
 import { EventsPage } from "./pages/eventspage";
+import { UserAccount } from "./pages/useraccount";
 
 //create your first component
 const Layout = () => {
@@ -40,6 +41,9 @@ const Layout = () => {
             </Route>
             <Route exact path="/events">
               <EventsPage />
+            </Route>
+            <Route exact path="/useraccount">
+              <UserAccount />
             </Route>
 
             <Route>

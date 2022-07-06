@@ -86,6 +86,17 @@ const getState = ({ getStore, getActions, setStore }) => {
           console.error("There has been an error logging in!");
         }
       },
+      changeZip: async (zipcode) => {
+        const opts = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            zipcode: zipcode,
+          }),
+        };
+      },
       getEventByZip: (zip) => {
         fetch(process.env.BACKEND_URL + "/api/event/" + zip)
           .then((resp) => resp.json())

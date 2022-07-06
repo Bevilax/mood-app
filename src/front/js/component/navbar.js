@@ -21,9 +21,17 @@ export const Navbar = () => {
                 <button type="button" className="invisible" disabled></button>
               </Link>
             ) : (
-              <button onClick={() => actions.logout()} className="logout">
-                Log out
-              </button>
+              <>
+                {" "}
+                <Link to="/">
+                  <button onClick={() => actions.logout()} className="logout">
+                    Log out
+                  </button>
+                </Link>
+                <Link>
+                  <button className="myaccount">My Account</button>
+                </Link>
+              </>
             )}
           </div>
         </div>
