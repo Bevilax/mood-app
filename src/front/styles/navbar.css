@@ -21,3 +21,15 @@
   border: 0;
   outline: 0;
 }
+
+.myaccount {
+  display: block;
+  background-color: rgb(140, 82, 255);
+  padding: 5px 10px;
+  border-radius: 12px;
+  color: white;
+  transform: translateY(-6px);
+  font-family: Fascinate;
+  border: 0;
+  outline: 0;
+}
