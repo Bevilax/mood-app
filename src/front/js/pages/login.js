@@ -26,38 +26,41 @@ export const Login = () => {
         {!!token ? (
           <Emotions />
         ) : (
-          <div
-            className="backgroundImage"
-            style={{
-              backgroundImage: `url(${backgroundyImageUrl})`,
-            }}
-          >
-            <div className="logForm">
-              <h1 className="Loglog">Login</h1>
-              <div>
-                <input
-                  type="text"
-                  placeholder="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                ></input>
-                <br />
-                <br />
-                <input
-                  type="password"
-                  placeholder="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                ></input>
-                <br />
-                <br />
-                <button className="LoginButton" onClick={handleClick}>
-                  Login
-                </button>
+          <div>
+            <p className="FeelingModdy">Feeling Moody? Find what to do!</p>
+            <div
+              className="backgroundImage"
+              style={{
+                backgroundImage: `url(${backgroundyImageUrl})`,
+              }}
+            >
+              <div className="logForm">
+                <h1 className="Loglog">Login</h1>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  ></input>
+                  <br />
+                  <br />
+                  <input
+                    type="password"
+                    placeholder="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  ></input>
+                  <br />
+                  <br />
+                  <button className="LoginButton" onClick={handleClick}>
+                    Login
+                  </button>
+                </div>
               </div>
-            </div>
-            <div className="CreateAccount">
-              <CreateAccount />
+              <div className="CreateAccount">
+                <CreateAccount />
+              </div>
             </div>
           </div>
         )}

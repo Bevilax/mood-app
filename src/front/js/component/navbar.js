@@ -22,15 +22,35 @@ export const Navbar = () => {
               </Link>
             ) : (
               <>
-                {" "}
-                <Link to="/">
-                  <button onClick={() => actions.logout()} className="logout">
-                    Log out
+                <div className="dropdown">
+                  <button
+                    className="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Dropdown button
                   </button>
-                </Link>
-                <Link>
-                  <button className="myaccount">My Account</button>
-                </Link>
+                  <div
+                    className="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    {" "}
+                    <Link className="dropdown-item" to="/">
+                      <button
+                        onClick={() => actions.logout()}
+                        className="logout"
+                      >
+                        Log out
+                      </button>
+                    </Link>
+                    <Link className="dropdown-item">
+                      <button className="myaccount">My Account</button>
+                    </Link>
+                  </div>
+                </div>
               </>
             )}
           </div>
