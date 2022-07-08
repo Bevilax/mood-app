@@ -8,8 +8,11 @@
   position: relative;
 }
 
-.image {
+img {
   margin-left: 490px;
+  max-width: 200px;
+  width: auto;
+  height: auto;
 }
 
 .logout {

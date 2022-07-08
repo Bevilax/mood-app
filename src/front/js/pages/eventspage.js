@@ -30,6 +30,7 @@ export const EventsPage = () => {
                 venuename={eventOption?.venue?.["name"]}
                 image={eventOption?.performers[0]?.["image"]}
                 perName={eventOption?.performers[0]?.["type"]}
+                url={eventOption?.["url"]}
                 key={index}
               />
             ))}
