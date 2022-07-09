@@ -18,7 +18,7 @@ export const EventCard = (props) => {
             <a
               href={props.url}
               target="_blank"
-              className="btn btn-primary FindMore"
+              className="btn btn-outline FindMore"
             >
               Find out more!
             </a>

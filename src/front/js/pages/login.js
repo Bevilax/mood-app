@@ -59,7 +59,7 @@ export const Login = () => {
                     className="LoginButton mx-auto justify-content-center"
                     onClick={handleClick}
                   >
-                    Login
+                    Get Moody!
                   </button>
                 </div>
               </div>
