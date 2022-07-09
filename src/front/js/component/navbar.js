@@ -26,7 +26,7 @@ export const Navbar = () => {
                 <Link to="/">
                   <button
                     onClick={() => actions.logout()}
-                    className="logout position-absolute top-50 translate-middle"
+                    className="logout position-absolute top-50 translate-middle "
                   >
                     Log out
                   </button>

@@ -14,14 +14,10 @@ img {
 }
 
 .logout {
-  display: block;
   background-color: rgb(140, 82, 255);
   margin-left: 300px !important;
   padding: 5px 10px;
   border-radius: 12px;
   color: white;
-  transform: translateY(-6px);
   font-family: Fascinate;
-  border: 0;
-  outline: 0;
 }

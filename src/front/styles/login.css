@@ -4,6 +4,7 @@
   font-size: larger;
   color: white;
   font-family: Fascinate;
+  margin-left: 20px !important;
 }
 
 .Loglog {
@@ -16,12 +17,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   height: 725px;
-}
-
-.Form {
-  margin: auto;
-  width: 60%;
-  padding: 10px;
 }
 
 .logForm {

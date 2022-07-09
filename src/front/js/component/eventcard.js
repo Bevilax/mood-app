@@ -3,8 +3,8 @@ import "../../styles/eventcard.css";
 
 export const EventCard = (props) => {
   return (
-    <div className="col-3 m-3">
-      <div className="card-deck">
+    <div className="card-deck row mx-auto justify-content-center">
+      <div className="card col-sm-6">
         <div className="card">
           <img className="card-img-top Photo" src={props.image} />
           <div className="card-body">

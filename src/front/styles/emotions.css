@@ -3,9 +3,6 @@
   animation: fadeInAnimation ease 5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  display: block;
-  margin-left: 100px;
-  margin-right: auto;
 }
 
 .GetEvents {

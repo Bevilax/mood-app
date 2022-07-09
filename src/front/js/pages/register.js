@@ -25,13 +25,15 @@ export const Register = () => {
     <div className="whole">
       <div className="text-center mt-5 Form">
         <div
-          className="backgroundImage2"
+          className="backgroundImage2 mx-auto justify-content-center"
           style={{
             backgroundImage: `url(${backgroundyImageUrl})`,
           }}
         >
-          <div className="ActualRegistrationForm">
-            <h1 className="RegistrationSentence">Registration</h1>
+          <div className="ActualRegistrationForm mx-auto text-center">
+            <h1 className="RegistrationSentence mx-auto text-center">
+              Registration
+            </h1>
             <div>
               <input
                 type="text"

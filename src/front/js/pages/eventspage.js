@@ -18,8 +18,8 @@ export const EventsPage = () => {
   }, []);
 
   return (
-    <div className="eventview container">
-      <div className="row overflow-scroll">
+    <div className="eventview container ">
+      <div className="row overflow-scroll ">
         <div className="vh-100 container">
           <div>
             {results.map((eventOption, index) => (

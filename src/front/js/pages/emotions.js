@@ -12,8 +12,11 @@ export const Emotions = () => {
 
   return (
     <div>
-      <p className="HowDoYou">What Is Your Mood?</p>
-      <div className="btn emotions-body" role="group">
+      <p className="HowDoYou mx-auto text-center">What Is Your Mood?</p>
+      <div
+        className="btn emotions-body mx-auto justify-content-center"
+        role="group"
+      >
         <input
           type="checkbox"
           className="btn-check"
