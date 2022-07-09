@@ -27,15 +27,17 @@ export const Login = () => {
           <Emotions />
         ) : (
           <div>
-            <p className="FeelingModdy">Feeling Moody? Find what to do!</p>
+            <p className="FeelingModdy mx-auto text-center">
+              Feeling Moody? Find what to do!
+            </p>
             <div
-              className="backgroundImage"
+              className="backgroundImage mx-auto justify-content-center"
               style={{
                 backgroundImage: `url(${backgroundyImageUrl})`,
               }}
             >
-              <div className="logForm">
-                <h1 className="Loglog">Login</h1>
+              <div className="logForm mx-auto text-center ">
+                <h1 className="Loglog mx-auto text-center">Login</h1>
                 <div>
                   <input
                     type="text"
@@ -53,12 +55,15 @@ export const Login = () => {
                   ></input>
                   <br />
                   <br />
-                  <button className="LoginButton" onClick={handleClick}>
+                  <button
+                    className="LoginButton mx-auto justify-content-center"
+                    onClick={handleClick}
+                  >
                     Login
                   </button>
                 </div>
               </div>
-              <div className="CreateAccount">
+              <div className="CreateAccount ">
                 <CreateAccount />
               </div>
             </div>

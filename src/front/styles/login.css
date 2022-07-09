@@ -1,10 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Fascinate&display=swap");
 
 .FeelingModdy {
-  display: inline-block;
-  background-color: rgb(255, 189, 89);
   font-size: larger;
-  margin-left: 100px;
   color: white;
   font-family: Fascinate;
 }
@@ -17,7 +14,7 @@
 .backgroundImage {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 725px;
 }
 

@@ -9,7 +9,7 @@ export const Navbar = () => {
   return (
     <div className="NavNav">
       <nav className="navbar ">
-        <div className="container">
+        <div className="container mx-auto justify-content-center">
           <Link to="/">
             <span className="image">
               <img src={moodyImageUrl} width="600" height="500" />
@@ -24,7 +24,10 @@ export const Navbar = () => {
               <>
                 {" "}
                 <Link to="/">
-                  <button onClick={() => actions.logout()} className="logout">
+                  <button
+                    onClick={() => actions.logout()}
+                    className="logout position-absolute top-50 translate-middle"
+                  >
                     Log out
                   </button>
                 </Link>
