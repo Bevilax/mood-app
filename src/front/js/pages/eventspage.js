@@ -2,10 +2,12 @@ import React, { useState, useEffect, useContext } from "react";
 import "../../styles/emotions.css";
 import { Context } from "../store/appContext";
 import { EventCard } from "../component/eventcard";
+import { useHistory, Link } from "react-router-dom";
 
 export const EventsPage = () => {
   const { store, actions } = useContext(Context);
   const [results, setResults] = React.useState([]);
+  const history = useHistory();
 
   React.useEffect(() => {
     const fn = async () => {
@@ -18,7 +20,11 @@ export const EventsPage = () => {
   }, []);
 
   return (
-    <div className="eventview container ">
+    <div className="eventview container">
+      <div>
+        <button type="button">Back to Moods</button>
+      </div>
+
       <div className="row overflow-scroll ">
         <div className="vh-100 container">
           <div>

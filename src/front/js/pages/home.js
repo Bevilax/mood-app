@@ -7,7 +7,7 @@ import "../../styles/home.css";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
-  const token = localStorage.getItem("token");
+  const token = sessionStorage.getItem("token");
 
   return (
     <div>
