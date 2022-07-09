@@ -12,7 +12,7 @@ export const Login = () => {
   const [password, setPassword] = useState("");
   const history = useHistory();
 
-  const token = sessionStorage.getItem("token");
+  const token = localStorage.getItem("token");
 
   const handleClick = () => {
     actions.login(email, password).then(() => {

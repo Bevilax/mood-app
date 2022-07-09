@@ -32,9 +32,6 @@ const Layout = () => {
             <Route exact path="/register">
               <Register />
             </Route>
-            <Route exact path="/api">
-              <ApiTesting />
-            </Route>
             <Route exact path="/emotions">
               <Emotions />
             </Route>

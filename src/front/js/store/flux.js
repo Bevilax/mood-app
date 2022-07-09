@@ -48,7 +48,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
       logout: () => {
-        sessionStorage.removeItem("token");
+        localStorage.removeItem("token");
         console.log("You've been logged out");
         setStore({ token: null });
       },
@@ -77,7 +77,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
           const data = await resp.json();
           console.log(data);
-          sessionStorage.setItem("token", data.access_token);
+          localStorage.setItem("token", data.access_token);
           setStore({ token: data.token });
           setStore({ user: data.user });
           console.log(data);
