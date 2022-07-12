@@ -12,7 +12,7 @@ export const Emotions = () => {
   const history = useHistory();
 
   return (
-    <div>
+    <div className="whole">
       <div>
         <MoodyDescription />
       </div>

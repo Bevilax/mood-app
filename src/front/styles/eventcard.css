@@ -2,16 +2,17 @@
 
 .Photo {
   display: block;
+  margin-top: 8px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
 
-.card {
-  background-color: rgb(255, 189, 88);
+.cardBorder {
+  background-color: blueviolet;
   border-radius: 12px;
-
   box-shadow: 5px;
+  margin-bottom: 2px;
 }
 
 .FindMore {
