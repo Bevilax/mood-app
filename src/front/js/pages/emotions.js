@@ -21,7 +21,7 @@ export const Emotions = () => {
           type="checkbox"
           className="btn-check"
           id="btncheck1"
-          autocomplete="off"
+          autoComplete="off"
           onClick={(e) => {
             actions.getEventByZipAndTaxonomy(1060000);
             actions.getEventByZipAndTaxonomy(1110000);
@@ -31,8 +31,8 @@ export const Emotions = () => {
           }}
         />
 
-        <label className="btn btn-outline fadingout" for="btncheck1">
-          <i class="fa-solid fa-broom-ball"></i>
+        <label className="btn btn-outline fadingout" htmlFor="btncheck1">
+          <i className="fa-solid fa-broom-ball"></i>
           <br />
           Adventurous
         </label>
@@ -41,7 +41,7 @@ export const Emotions = () => {
           type="checkbox"
           className="btn-check"
           id="btncheck2"
-          autocomplete="off"
+          autoComplete="off"
           onClick={(e) => {
             actions.getEventByZipAndTaxonomy(1020000);
             actions.getEventByZipAndTaxonomy(1030000);
@@ -54,8 +54,8 @@ export const Emotions = () => {
           }}
         />
 
-        <label className="btn btn-outline fadingout" for="btncheck2">
-          <i class="fa-solid fa-bolt"></i>
+        <label className="btn btn-outline fadingout" htmlFor="btncheck2">
+          <i className="fa-solid fa-bolt"></i>
           <br />
           Energetic
         </label>
@@ -64,7 +64,7 @@ export const Emotions = () => {
           type="checkbox"
           className="btn-check"
           id="btncheck3"
-          autocomplete="off"
+          autoComplete="off"
           onClick={(e) => {
             actions.getEventByZipAndTaxonomy(1100000);
             actions.getEventByZipAndTaxonomy(1100000);
@@ -73,8 +73,8 @@ export const Emotions = () => {
             actions.getEventByZipAndTaxonomy(3020000);
           }}
         />
-        <label className="btn btn-outline fadingout" for="btncheck3">
-          <i class="fa-solid fa-masks-theater"></i>
+        <label className="btn btn-outline fadingout" htmlFor="btncheck3">
+          <i className="fa-solid fa-masks-theater"></i>
           <br />
           Artistic
         </label>
@@ -82,15 +82,15 @@ export const Emotions = () => {
           type="checkbox"
           className="btn-check"
           id="btncheck4"
-          autocomplete="off"
+          autoComplete="off"
           onClick={(e) => {
             actions.getEventByZipAndTaxonomy(1090000);
             actions.getEventByZipAndTaxonomy(3010000);
             actions.getEventByZipAndTaxonomy(3060000);
           }}
         />
-        <label className="btn btn-outline fadingout" for="btncheck4">
-          <i class="fa-solid fa-head-side-virus"></i>
+        <label className="btn btn-outline fadingout" htmlFor="btncheck4">
+          <i className="fa-solid fa-head-side-virus"></i>
           <br />
           Introspective
         </label>
@@ -98,7 +98,7 @@ export const Emotions = () => {
           type="checkbox"
           className="btn-check"
           id="btncheck5"
-          autocomplete="off"
+          autoComplete="off"
           onClick={(e) => {
             actions.getEventByZipAndTaxonomy(1010000);
             actions.getEventByZipAndTaxonomy(1120000);
@@ -106,8 +106,8 @@ export const Emotions = () => {
             actions.getEventByZipAndTaxonomy(3090000);
           }}
         />
-        <label className="btn btn-outline fadingout" for="btncheck5">
-          <i class="fa-solid fa-users"></i>
+        <label className="btn btn-outline fadingout" htmlFor="btncheck5">
+          <i className="fa-solid fa-users"></i>
           <br />
           Social
         </label>
@@ -115,7 +115,7 @@ export const Emotions = () => {
           type="checkbox"
           className="btn-check"
           id="btncheck6"
-          autocomplete="off"
+          autoComplete="off"
           onClick={(e) => {
             actions.getEventByZipAndTaxonomy(1010000);
             actions.getEventByZipAndTaxonomy(1050000);
@@ -124,8 +124,8 @@ export const Emotions = () => {
             actions.getEventByZipAndTaxonomy(3070000);
           }}
         />
-        <label className="btn btn-outline fadingout" for="btncheck6">
-          <i class="fa-solid fa-user"></i>
+        <label className="btn btn-outline fadingout" htmlFor="btncheck6">
+          <i className="fa-solid fa-user"></i>
           <br />
           Lonely
         </label>
@@ -133,15 +133,15 @@ export const Emotions = () => {
           type="checkbox"
           className="btn-check"
           id="btncheck7"
-          autocomplete="off"
+          autoComplete="off"
           onClick={(e) => {
             actions.getEventByZipAndTaxonomy(1060000);
             actions.getEventByZipAndTaxonomy(1130000);
             actions.getEventByZipAndTaxonomy(3070000);
           }}
         />
-        <label className="btn btn-outline fadingout" for="btncheck7">
-          <i class="fa-solid fa-face-sad-tear"></i>
+        <label className="btn btn-outline fadingout" htmlFor="btncheck7">
+          <i className="fa-solid fa-face-sad-tear"></i>
           <br />
           Sad
         </label>
@@ -149,15 +149,15 @@ export const Emotions = () => {
           type="checkbox"
           className="btn-check"
           id="btncheck8"
-          autocomplete="off"
+          autoComplete="off"
           onClick={(e) => {
             actions.getEventByZipAndTaxonomy(1140000);
             actions.getEventByZipAndTaxonomy(3010000);
             actions.getEventByZipAndTaxonomy(3080000);
           }}
         />
-        <label className="btn btn-outline fadingout" for="btncheck8">
-          <i class="fa-solid fa-face-tired"></i>
+        <label className="btn btn-outline fadingout" htmlFor="btncheck8">
+          <i className="fa-solid fa-face-tired"></i>
           <br />
           Stressed
         </label>
@@ -165,7 +165,7 @@ export const Emotions = () => {
           type="checkbox"
           className="btn-check"
           id="btncheck9"
-          autocomplete="off"
+          autoComplete="off"
           onClick={() => {
             history.push("/events");
           }}
@@ -173,7 +173,7 @@ export const Emotions = () => {
         <div>
           <Link to="/events">
             {" "}
-            <button className="btn GetEvents" for="btncheck9">
+            <button className="btn GetEvents" htmlFor="btncheck9">
               Find Events
             </button>
           </Link>

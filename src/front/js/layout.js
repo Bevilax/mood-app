@@ -10,7 +10,6 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { ApiTesting } from "./pages/apitesting";
 import { Emotions } from "./pages/emotions";
 import { EventsPage } from "./pages/eventspage";
 

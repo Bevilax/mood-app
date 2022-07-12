@@ -3,6 +3,7 @@ import "../../styles/emotions.css";
 import { Context } from "../store/appContext";
 import { EventCard } from "../component/eventcard";
 import { useHistory, Link } from "react-router-dom";
+import { MoodyDescription } from "../component/moodydescription";
 
 export const EventsPage = () => {
   const { store, actions } = useContext(Context);
@@ -20,26 +21,28 @@ export const EventsPage = () => {
   }, []);
 
   return (
-    <div className="eventview container">
+    <div>
       <div>
-        <button type="button">Back to Moods</button>
+        <MoodyDescription />
       </div>
 
-      <div className="row overflow-scroll ">
-        <div className="vh-100 container">
-          <div>
-            {results.map((eventOption, index) => (
-              <EventCard
-                title={eventOption["title"]}
-                type={eventOption["type"]}
-                eventtime={eventOption?.["datetime_local"]}
-                venuename={eventOption?.venue?.["name"]}
-                image={eventOption?.performers[0]?.["image"]}
-                perName={eventOption?.performers[0]?.["type"]}
-                url={eventOption?.["url"]}
-                key={index}
-              />
-            ))}
+      <div className="eventview container">
+        <div className="row overflow-scroll ">
+          <div className="vh-100 container">
+            <div>
+              {results.map((eventOption, index) => (
+                <EventCard
+                  title={eventOption["title"]}
+                  type={eventOption["type"]}
+                  eventtime={eventOption?.["datetime_local"]}
+                  venuename={eventOption?.venue?.["name"]}
+                  image={eventOption?.performers[0]?.["image"]}
+                  perName={eventOption?.performers[0]?.["type"]}
+                  url={eventOption?.["url"]}
+                  key={index}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
