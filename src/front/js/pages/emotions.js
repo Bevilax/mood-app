@@ -28,7 +28,6 @@ export const Emotions = () => {
             id="btncheck1"
             autoComplete="off"
             onClick={(e) => {
-              actions.getEventByZipAndTaxonomy(1060000);
               actions.getEventByZipAndTaxonomy(1110000);
               actions.getEventByZipAndTaxonomy(1120000);
               actions.getEventByZipAndTaxonomy(1150000);
@@ -49,12 +48,9 @@ export const Emotions = () => {
             autoComplete="off"
             onClick={(e) => {
               actions.getEventByZipAndTaxonomy(1020000);
-              actions.getEventByZipAndTaxonomy(1030000);
-              actions.getEventByZipAndTaxonomy(1040000);
+              actions.getEventByZipAndTaxonomy(1060000);
               actions.getEventByZipAndTaxonomy(1080000);
-              actions.getEventByZipAndTaxonomy(1140000);
-              actions.getEventByZipAndTaxonomy(2010000);
-              actions.getEventByZipAndTaxonomy(3050000);
+              actions.getEventByZipAndTaxonomy(1130000);
               actions.getEventByZipAndTaxonomy(3090000);
             }}
           />
@@ -71,10 +67,9 @@ export const Emotions = () => {
             id="btncheck3"
             autoComplete="off"
             onClick={(e) => {
-              actions.getEventByZipAndTaxonomy(1100000);
-              actions.getEventByZipAndTaxonomy(1100000);
-              actions.getEventByZipAndTaxonomy(1130000);
-              actions.getEventByZipAndTaxonomy(1150000);
+              actions.getEventByZipAndTaxonomy(1090000);
+              actions.getEventByZipAndTaxonomy(3030000);
+              actions.getEventByZipAndTaxonomy(3010000);
               actions.getEventByZipAndTaxonomy(3020000);
             }}
           />
@@ -89,9 +84,9 @@ export const Emotions = () => {
             id="btncheck4"
             autoComplete="off"
             onClick={(e) => {
-              actions.getEventByZipAndTaxonomy(1090000);
-              actions.getEventByZipAndTaxonomy(3010000);
-              actions.getEventByZipAndTaxonomy(3060000);
+              actions.getEventByZipAndTaxonomy(1070000);
+              actions.getEventByZipAndTaxonomy(3070000);
+              actions.getEventByZipAndTaxonomy(3080000);
             }}
           />
           <label className="btn btn-outline fadingout" htmlFor="btncheck4">
@@ -106,9 +101,9 @@ export const Emotions = () => {
             autoComplete="off"
             onClick={(e) => {
               actions.getEventByZipAndTaxonomy(1010000);
-              actions.getEventByZipAndTaxonomy(1120000);
-              actions.getEventByZipAndTaxonomy(3030000);
-              actions.getEventByZipAndTaxonomy(3090000);
+              actions.getEventByZipAndTaxonomy(1030000);
+              actions.getEventByZipAndTaxonomy(1090000);
+              actions.getEventByZipAndTaxonomy(3050000);
             }}
           />
           <label className="btn btn-outline fadingout" htmlFor="btncheck5">
@@ -122,11 +117,9 @@ export const Emotions = () => {
             id="btncheck6"
             autoComplete="off"
             onClick={(e) => {
-              actions.getEventByZipAndTaxonomy(1010000);
-              actions.getEventByZipAndTaxonomy(1050000);
+              actions.getEventByZipAndTaxonomy(1020000);
               actions.getEventByZipAndTaxonomy(1100000);
-              actions.getEventByZipAndTaxonomy(1140000);
-              actions.getEventByZipAndTaxonomy(3070000);
+              actions.getEventByZipAndTaxonomy(3090000);
             }}
           />
           <label className="btn btn-outline fadingout" htmlFor="btncheck6">
@@ -140,8 +133,8 @@ export const Emotions = () => {
             id="btncheck7"
             autoComplete="off"
             onClick={(e) => {
-              actions.getEventByZipAndTaxonomy(1060000);
-              actions.getEventByZipAndTaxonomy(1130000);
+              actions.getEventByZipAndTaxonomy(1050000);
+              actions.getEventByZipAndTaxonomy(3090000);
               actions.getEventByZipAndTaxonomy(3070000);
             }}
           />
@@ -156,9 +149,10 @@ export const Emotions = () => {
             id="btncheck8"
             autoComplete="off"
             onClick={(e) => {
+              actions.getEventByZipAndTaxonomy(1040000);
+              actions.getEventByZipAndTaxonomy(1070000);
+              actions.getEventByZipAndTaxonomy(1100000);
               actions.getEventByZipAndTaxonomy(1140000);
-              actions.getEventByZipAndTaxonomy(3010000);
-              actions.getEventByZipAndTaxonomy(3080000);
             }}
           />
           <label className="btn btn-outline fadingout" htmlFor="btncheck8">
